@@ -9,7 +9,8 @@ const port = 3000;
 
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/mydatabase')
+
+mongoose.connect('mongodb://localhost:27017/mydatabase') //Port Connection goes here
   .then(() => {
       console.log('Connected to MongoDB');
   })
@@ -17,6 +18,7 @@ mongoose.connect('mongodb://localhost:27017/mydatabase')
       console.error('Error connecting to MongoDB:', error);
   });
 
+//Routes go here
 app.use('/items', itemRoutes);
 app.use('/orders', orderRoutes);
 app.use('/godspeeds', godspeedRoutes);
