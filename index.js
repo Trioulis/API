@@ -6,6 +6,7 @@ const port = 3000;
 // Import the routes
 const itemRoutes = require('./routes/items');
 const userRoutes = require('./routes/users');
+const godspeedRoutes = require('./routes/godspeeds');
 
 // Middleware to parse JSON requests
 app.use(express.json());
@@ -20,6 +21,8 @@ mongoose.connect('mongodb://localhost:27017/HeroesDB') // Connecting to local Mo
 // Use the item routes
 app.use('/items', itemRoutes);
 app.use('/users', userRoutes);
+app.use('/godspeeds', godspeedRoutes);
+
 
 // Start the server
 app.listen(port, () => {
