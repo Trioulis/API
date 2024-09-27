@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const Item = require('../models/Godspeed'); // Import the Item model
 const Godspeed = require('../models/Godspeed');
 
 // Create a new godspeed (POST)
